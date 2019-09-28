@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                                 isya.setText(itemList.get(i).getIsha());
                                 ashar.setText(itemList.get(i).getAsr());
                             }
-                            if (pressure>1012){
+                            if (pressure>1013){
                                 imgpress.setImageResource(R.drawable.rain);
                             }
                             if (temperature>0 && temperature<26) {
