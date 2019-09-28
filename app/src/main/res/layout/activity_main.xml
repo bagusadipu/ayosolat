@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#22301D"
+>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/framesolat"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/kabah">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Pressure"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgpressure"
+                android:background="@drawable/sun"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="44dp"
+                android:layout_height="44dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="right">
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatur"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <ImageView
+                android:id="@+id/imgtemperature"
+                android:layout_width="53dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/summer" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtKotaAnda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/framesolat"
+        android:textAlignment="center"
+        android:text="Kota Anda : "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edkota"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txtKotaAnda"
+        android:hint="huruf kecil contoh 'bogor'"
+        android:textColorHint="#000000"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/relkota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edkota"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btncheck"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:text="Custom Search"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:backgroundTint="#BBBBBB" />
+        <Button
+            android:id="@+id/btncity"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2050AF"
+            android:layout_marginStart="26dp"
+            android:text="Your City Location"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/btncheck" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/relkota"
+        android:background="#262626"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/hariini"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HARI"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/subuh"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Subuh"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#F8D10E"
+                />
+            <TextView
+                android:id="@+id/dzuhur"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Dzuhur"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#F8D10E"/>
+            <TextView
+                android:id="@+id/ashar"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Ashar"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#F8D10E"/>
+            <TextView
+                android:id="@+id/maghrib"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Maghrib"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#F8D10E"/>
+            <TextView
+                android:id="@+id/isya"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Isya"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#F8D10E"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/jsubuh"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="dzuhur"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="SmallSp" />
+            <TextView
+                android:id="@+id/jdzuhur"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="dzuhur"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="SmallSp" />
+            <TextView
+                android:id="@+id/jashar"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="dzuhur"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="SmallSp" />
+            <TextView
+                android:id="@+id/jmaghrib"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="dzuhur"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="SmallSp" />
+            <TextView
+                android:id="@+id/jisya"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="dzuhur"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@id/relkota"-->
+<!--        android:background="#262626"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="40dp">-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/listsubuh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:text="Subuh : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/subuh"-->
+<!--            android:text="Kota Anda : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/listdzuhur"-->
+<!--        android:layout_below="@id/listsubuh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:text="Dzuhur : "-->
+<!--            style="@style/StyleSolat"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/dzuhur"-->
+<!--            android:text="Kota Anda : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/listashar"-->
+<!--        android:layout_below="@id/listdzuhur"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:text="Ashar   : "-->
+<!--            style="@style/StyleSolat"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/ashar"-->
+<!--            android:text="Kota Anda : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/listmaghrib"-->
+<!--        android:layout_below="@id/listashar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:text="Maghrib: "-->
+<!--            style="@style/StyleSolat"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/maghrib"-->
+<!--            android:text="Kota Anda : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/listisya"-->
+<!--        android:layout_below="@id/listmaghrib"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp">-->
+<!--        <TextView-->
+<!--            android:text="Isya : "-->
+<!--            style="@style/StyleSolat"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/Isya"-->
+<!--            android:text="Kota Anda : "-->
+<!--            style="@style/StyleSolat"/>-->
+<!--    </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/temperatur"-->
+<!--        android:layout_below="@id/listisya"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+</RelativeLayout>
+</ScrollView>
