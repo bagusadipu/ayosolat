@@ -100,13 +100,16 @@ public class MainActivity extends AppCompatActivity {
 
 
                             Log.d("SIZENYA", String.valueOf(itemList.size()));
-                            for(int i=0;i<itemList.size();i++){
-                                dzuhur.setText(itemList.get(i).getDhuhr());
-                                maghrib.setText(itemList.get(i).getMaghrib());
-                                subuh.setText(itemList.get(i).getFajr());
-                                isya.setText(itemList.get(i).getIsha());
-                                ashar.setText(itemList.get(i).getAsr());
+                            if (itemList.size()==1){
+                                for(int i=0;i<itemList.size();i++){
+                                    dzuhur.setText(itemList.get(i).getDhuhr());
+                                    maghrib.setText(itemList.get(i).getMaghrib());
+                                    subuh.setText(itemList.get(i).getFajr());
+                                    isya.setText(itemList.get(i).getIsha());
+                                    ashar.setText(itemList.get(i).getAsr());
+                                }
                             }
+
                             if (pressure>1013){
                                 imgpress.setImageResource(R.drawable.rain);
                             }
