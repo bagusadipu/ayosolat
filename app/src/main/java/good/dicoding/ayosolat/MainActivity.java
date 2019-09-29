@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                             int temperature = Integer.parseInt(response.getTodayWeather().getTemperature());
 //                            Log.d("WEATHER",pres+""+tempe);
 
+
+                            Log.d("SIZENYA", String.valueOf(itemList.size()));
                             for(int i=0;i<itemList.size();i++){
                                 dzuhur.setText(itemList.get(i).getDhuhr());
                                 maghrib.setText(itemList.get(i).getMaghrib());
